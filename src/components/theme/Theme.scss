@@ -1,0 +1,28 @@
+.theme-control {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  padding: 1em;
+  button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: hsl(22, 31%, 60%);
+  }
+  button:nth-child(2) {
+    background-color: rgb(167, 119, 14);
+  }
+  button:nth-child(3) {
+    background-color: rgb(121, 167, 14);
+  }
+  button:nth-child(4) {
+    background-color: rgb(111, 14, 167);
+  }
+  button:nth-child(5) {
+    background-color: rgb(167, 55, 14);
+  }
+  button:nth-child(6) {
+    background-color: rgb(14, 167, 85);
+  }
+}

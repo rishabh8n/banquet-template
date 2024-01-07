@@ -1,0 +1,22 @@
+body {
+  background-color: var(--neutral-200);
+  font-family: var(--ff-primary);
+}
+
+.App {
+  &.theme2 {
+    --accent-500: rgb(167, 119, 14);
+  }
+  &.theme3 {
+    --accent-500: rgb(121, 167, 14);
+  }
+  &.theme4 {
+    --accent-500: rgb(111, 14, 167);
+  }
+  &.theme5 {
+    --accent-500: rgb(167, 55, 14);
+  }
+  &.theme6 {
+    --accent-500: rgb(14, 167, 85);
+  }
+}

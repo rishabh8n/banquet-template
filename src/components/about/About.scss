@@ -1,0 +1,50 @@
+.about {
+  padding-block: 2em;
+  padding-inline: 1em;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "img";
+  grid-template-columns: 1fr;
+  &-img {
+    grid-area: img;
+    margin-bottom: 0.5em;
+  }
+  &-title {
+    grid-area: title;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 45em) {
+  .about {
+    padding: 2em 1.5em;
+    grid-template-columns: 1fr 0.7fr;
+    grid-template-rows: 40px 50px 1fr;
+    grid-template-areas:
+      "title img"
+      "head img"
+      "desc img";
+    align-items: start;
+    justify-content: start;
+    &-img {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-title {
+      margin-bottom: 0;
+      text-align: start;
+    }
+    &-desc {
+      grid-area: desc;
+
+      width: 80%;
+    }
+    &-head {
+      grid-area: head;
+    }
+  }
+}

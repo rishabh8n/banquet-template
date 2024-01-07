@@ -1,0 +1,53 @@
+@use "variable" as *;
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Rubik+Doodle+Shadow&display=swap");
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+  @each $font, $value in $fonts {
+    --fs-#{$font}: #{$value};
+  }
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-logo: "Rubik Doodle Shadow", system-ui;
+  --ff-secondary: "Playfair Display", serif;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+@each $font, $value in $fonts {
+  .fs-#{$font} {
+    font-size: var(--fs-#{$font});
+  }
+}
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .clr-#{$color}-#{$shade} {
+      color: var(--#{$color}-#{$shade});
+    }
+    .bg-#{$color}-#{$shade} {
+      background-color: var(--#{$color}-#{$shade});
+    }
+  }
+}
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+.fw-600 {
+  font-weight: var(--fw-600);
+}
+.fw-500 {
+  font-weight: var(--fw-500);
+}
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+.fw-300 {
+  font-weight: var(--fw-300);
+}
+.align-center {
+  text-align: center;
+}

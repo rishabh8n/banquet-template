@@ -1,0 +1,25 @@
+.hero {
+  font-family: var(--ff-secondary);
+  background: url(../../assets/hero.jpg);
+  background-size: cover;
+  padding: 1em;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  .action-btn {
+    border: none;
+    outline: none;
+    padding: 0.9em 2em;
+    margin-top: 1em;
+    cursor: pointer;
+    font-family: var(--ff-primary);
+  }
+}
+@media only screen and (min-width: 45em) {
+  .hero {
+    margin-inline: 1.5em;
+  }
+}
